@@ -1,0 +1,48 @@
+name: Daily fare snapshot
+
+# 每天抓一次 TPE 出發的票價快照，commit 回 repo 累積歷史。
+# 需要在 repo Secrets 設定 TP_TOKEN、TALOR_TOKEN（見 README）。
+
+on:
+  schedule:
+    - cron: "0 1 * * *" # 01:00 UTC = 09:00 台灣時間
+  workflow_dispatch: {} # 也可在 Actions 頁手動觸發
+
+permissions:
+  contents: write # 需要寫入才能 commit 快照
+
+concurrency:
+  group: fetch-daily
+  cancel-in-progress: false
+
+jobs:
+  fetch:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version: "22"
+
+      - name: Fetch daily snapshot
+        env:
+          TP_TOKEN: ${{ secrets.TP_TOKEN }}
+          TALOR_TOKEN: ${{ secrets.TALOR_TOKEN }}
+          # 需要調整範圍時改這裡（或在 workflow_dispatch 前改預設）
+          LEAD_DAYS: "30,60"
+          TRIP_LEN: "7"
+          CURRENCY: "twd"
+        run: node scripts/fetch-daily.mjs
+
+      - name: Commit snapshot
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "github-actions[bot]@users.noreply.github.com"
+          git add data/snapshots
+          if git diff --cached --quiet; then
+            echo "沒有新資料可 commit。"
+          else
+            git commit -m "data: 每日票價快照 $(date -u +%Y-%m-%d)"
+            git push
+          fi

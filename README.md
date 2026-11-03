@@ -51,5 +51,29 @@ npm run dev      # http://localhost:3000
 - `deals.ts` — seeded RNG generates a reproducible deal pool; ranked by Deal Score.
 - `scoring.ts` — z-score, normal-CDF percentile, weighted Deal Score.
 
+## Phase 1 — 真實票價抓取（進行中）
+
+開始接真實票價、累積自己的歷史基準。資料源選型與實測見
+[`docs/phase1-data-source-research.md`](docs/phase1-data-source-research.md)。
+
+**每日快照排程**（第一階：只抓 TPE 出發 12 條）
+- `scripts/fetch-daily.mjs` — 對 TPE→東京/首爾/大阪/沖繩/曼谷/新加坡/北海道/福岡/名古屋/濟州/倫敦/洛杉磯，
+  抓 TalorData（Google Flights）+ Travelpayouts，存成 `data/snapshots/<date>.json`。
+- `.github/workflows/fetch-daily.yml` — 每天 01:00 UTC（09:00 台灣）自動跑並把快照 commit 回 repo。
+- `scripts/lib/flight-sources.mjs` — 兩個資料源的呼叫/正規化（含 TalorData 間歇性失敗的重試）。
+- `scripts/probe-data-sources.mjs` — 一次性的覆蓋實測工具（選型階段用）。
+
+**設定**
+1. 本機：`cp .env.example .env.local`，填入 `TP_TOKEN`、`TALOR_TOKEN`，然後 `node scripts/fetch-daily.mjs`。
+2. 排程：在 repo **Settings → Secrets → Actions** 設定 `TP_TOKEN`、`TALOR_TOKEN`，
+   或用 gh（值從 .env.local 讀，不外露）：
+   ```bash
+   gh secret set TP_TOKEN --body "$(grep '^TP_TOKEN=' .env.local | cut -d= -f2-)"
+   gh secret set TALOR_TOKEN --body "$(grep '^TALOR_TOKEN=' .env.local | cut -d= -f2-)"
+   ```
+
+**已知待辦**：TalorData 價格回成 USD（需換匯成 TWD）、每日抓取仍只存原始快照（z-score 基準與接上
+`lib/scoring.ts`、改寫 `lib/deals.ts` 讀 DB 為後續步驟）。
+
 ## Not in scope (Phase 0)
 Real fare APIs, persistence, auth, actual notifications. See PRD §14 Phase 1–3.
