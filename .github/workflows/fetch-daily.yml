@@ -9,8 +9,8 @@ on:
   workflow_dispatch: # 也可在 Actions 頁手動觸發（可覆寫範圍，省額度測試用）
     inputs:
       only:
-        description: "資料源：both / talor / tp"
-        default: "both"
+        description: "資料源：talor / both / tp（註：TP 從 GitHub IP 會 401，CI 用 talor）"
+        default: "talor"
       lead_days:
         description: "出發距今天數（逗號分隔）"
         default: "30,60"
@@ -36,8 +36,8 @@ jobs:
         env:
           TP_TOKEN: ${{ secrets.TP_TOKEN }}
           TALOR_TOKEN: ${{ secrets.TALOR_TOKEN }}
-          # 手動觸發可覆寫；排程走預設。
-          ONLY: ${{ github.event.inputs.only || 'both' }}
+          # 手動觸發可覆寫；排程預設 talor（TP 從 GitHub IP 會 401）。
+          ONLY: ${{ github.event.inputs.only || 'talor' }}
           LEAD_DAYS: ${{ github.event.inputs.lead_days || '30,60' }}
           TRIP_LEN: "7"
           CURRENCY: "twd"

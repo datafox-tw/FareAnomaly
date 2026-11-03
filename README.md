@@ -72,6 +72,10 @@ npm run dev      # http://localhost:3000
    gh secret set TALOR_TOKEN --body "$(grep '^TALOR_TOKEN=' .env.local | cut -d= -f2-)"
    ```
 
+**實跑狀態（2026-11-03）**：GitHub Actions 已成功跑過，TalorData 對 12 條 ×（30/60 天）**24/24 全命中**（含長途倫敦/洛杉磯）。
+**Travelpayouts 在 CI 會 401**——同一把 token 本機（台灣 IP）正常，但從 GitHub Actions 的雲端 IP 被擋，
+故**排程預設只跑 TalorData**；TP 留作本機/手動補充。
+
 **已知待辦**：TalorData 價格回成 USD（需換匯成 TWD）、每日抓取仍只存原始快照（z-score 基準與接上
 `lib/scoring.ts`、改寫 `lib/deals.ts` 讀 DB 為後續步驟）。
 

@@ -15,6 +15,7 @@
 //   ONLY        talor | tp | both（預設 both）
 
 import { writeFile, mkdir } from "node:fs/promises";
+import { existsSync, readFileSync } from "node:fs";
 import { fileURLToPath } from "node:url";
 import { dirname, join } from "node:path";
 import {
@@ -93,6 +94,43 @@ function summarize(result) {
     top,
     attempts: result.attempts,
   };
+}
+
+const srcOk = (s) => Boolean(s && s.ok && s.offerCount > 0);
+
+// 合併既有當日快照（完全加性）：
+//  - 新抓成功就用新的；當次沒成功則保留舊檔的成功結果（標 carriedOver）。
+//  - 新快照沒涵蓋到的 (目的地, lead) 槽位，也從舊檔整個保留。
+// 避免任何部分執行（只跑某來源、某 window、或當次失敗）洗掉先前的好資料。
+function mergeWithPrevious(prev, next) {
+  const routeByDest = new Map(next.routes.map((r) => [r.destination, r]));
+  const nextQ = new Map();
+  for (const r of next.routes)
+    for (const q of r.queries) nextQ.set(`${r.destination}|${q.leadDays}`, q);
+
+  for (const pr of prev.routes || [])
+    for (const pq of pr.queries || []) {
+      const nq = nextQ.get(`${pr.destination}|${pq.leadDays}`);
+      if (nq) {
+        for (const k of ["talordata", "travelpayouts"]) {
+          if (!srcOk(nq.sources[k]) && srcOk(pq.sources?.[k]))
+            nq.sources[k] = { ...pq.sources[k], carriedOver: true };
+        }
+      } else {
+        // 新快照沒有這個槽位 → 把舊檔的成功來源整個帶過來。
+        let nr = routeByDest.get(pr.destination);
+        if (!nr) {
+          nr = { destination: pr.destination, city: pr.city, region: pr.region, queries: [] };
+          next.routes.push(nr);
+          routeByDest.set(pr.destination, nr);
+        }
+        const carried = { ...pq, sources: {} };
+        for (const [k, v] of Object.entries(pq.sources || {}))
+          if (srcOk(v)) carried.sources[k] = { ...v, carriedOver: true };
+        if (Object.keys(carried.sources).length) nr.queries.push(carried);
+      }
+    }
+  return next;
 }
 
 async function run() {
@@ -176,7 +214,17 @@ async function run() {
   const outDir = join(ROOT, "data", "snapshots");
   await mkdir(outDir, { recursive: true });
   const outFile = join(outDir, `${captureDate}.json`);
-  await writeFile(outFile, JSON.stringify(snapshot, null, 2));
+
+  // 合併同日既有快照，避免部分執行洗掉先前的好資料。
+  let toWrite = snapshot;
+  if (existsSync(outFile)) {
+    try {
+      toWrite = mergeWithPrevious(JSON.parse(readFileSync(outFile, "utf8")), snapshot);
+    } catch {
+      /* 壞檔就直接覆寫 */
+    }
+  }
+  await writeFile(outFile, JSON.stringify(toWrite, null, 2));
 
   console.log(
     `\n完成：${routes.length} 條路線寫入 ${outFile}` +

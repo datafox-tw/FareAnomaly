@@ -152,6 +152,7 @@ Travelpayouts 的資料是「真實使用者搜過才會進快取、只留 7 天
 3. **無 price_insights/歷史**：回傳不含價格基準 → 異常基準仍須自建（與原計畫一致）。
 
 **Travelpayouts 的侷限**：免費但 patchy（3/7，長途全空），且 `prices_for_dates` 不含 `found_at` 時間戳（要新鮮度得改用 `get_latest_prices`）。
+**⚠️ 2026-11-03 排程實跑再發現**：**Travelpayouts 從 GitHub Actions 的雲端 IP 會回 401**（同一把 token 本機台灣 IP 正常），應是對 datacenter IP 的封鎖。→ **排程（CI）改成 TalorData-only**，TalorData 在 GitHub 美國 IP 上對 12 條 ×（30/60 天）**24/24 全命中**，足以單獨撐起每日抓取；TP 留作本機/手動補充與交叉驗證。
 
 → **修正後的主力建議：TalorData 當廣度主力（含長途）＋重試機制；Travelpayouts 當免費補充與交叉驗證。** 每天輪詢存快照、USD→TWD、自建 z-score 基準。
 
