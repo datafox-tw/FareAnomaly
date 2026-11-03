@@ -6,7 +6,14 @@ name: Daily fare snapshot
 on:
   schedule:
     - cron: "0 1 * * *" # 01:00 UTC = 09:00 台灣時間
-  workflow_dispatch: {} # 也可在 Actions 頁手動觸發
+  workflow_dispatch: # 也可在 Actions 頁手動觸發（可覆寫範圍，省額度測試用）
+    inputs:
+      only:
+        description: "資料源：both / talor / tp"
+        default: "both"
+      lead_days:
+        description: "出發距今天數（逗號分隔）"
+        default: "30,60"
 
 permissions:
   contents: write # 需要寫入才能 commit 快照
@@ -29,8 +36,9 @@ jobs:
         env:
           TP_TOKEN: ${{ secrets.TP_TOKEN }}
           TALOR_TOKEN: ${{ secrets.TALOR_TOKEN }}
-          # 需要調整範圍時改這裡（或在 workflow_dispatch 前改預設）
-          LEAD_DAYS: "30,60"
+          # 手動觸發可覆寫；排程走預設。
+          ONLY: ${{ github.event.inputs.only || 'both' }}
+          LEAD_DAYS: ${{ github.event.inputs.lead_days || '30,60' }}
           TRIP_LEN: "7"
           CURRENCY: "twd"
         run: node scripts/fetch-daily.mjs
