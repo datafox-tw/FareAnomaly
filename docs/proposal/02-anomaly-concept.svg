@@ -1,0 +1,53 @@
+<svg viewBox="0 0 1040 500" xmlns="http://www.w3.org/2000/svg" font-family="'Helvetica Neue',Arial,'PingFang TC','Microsoft JhengHei',sans-serif">
+  <defs>
+    <style>
+      .title{font-size:24px;font-weight:700;fill:#1f2937}
+      .sub{font-size:13px;fill:#6b7280}
+      .lbl{font-size:13px;fill:#4b5563}
+      .band{font-size:13px;font-weight:700}
+      .note{font-size:12px;fill:#6b7280}
+    </style>
+  </defs>
+  <rect width="1040" height="500" fill="#ffffff"/>
+  <text x="40" y="46" class="title">核心概念：什麼叫「異常便宜」？</text>
+  <text x="40" y="70" class="sub">不是「哪張票最便宜」，而是「這張票相對自己過去的價格，便宜到幾乎不正常」</text>
+
+  <!-- axis -->
+  <line x1="90" y1="360" x2="950" y2="360" stroke="#9ca3af" stroke-width="2"/>
+  <text x="820" y="388" class="lbl">同路線歷史票價 →</text>
+  <text x="520" y="430" class="note" text-anchor="middle">平常價（歷史中位數 / 平均）</text>
+  <line x1="520" y1="110" x2="520" y2="360" stroke="#d1d5db" stroke-width="1.5" stroke-dasharray="5 4"/>
+
+  <!-- bell curve path (approx gaussian) -->
+  <path d="M90,358
+           C 230,356 300,352 360,330
+           C 430,300 470,180 520,135
+           C 570,180 610,300 680,330
+           C 740,352 810,356 950,358"
+        fill="none" stroke="#9ca3af" stroke-width="2.5"/>
+
+  <!-- shaded anomaly zone (far left, z < -2) -->
+  <path d="M90,358 C 230,356 300,352 345,336 L345,360 L90,360 Z" fill="#FDE68A" opacity="0.5"/>
+  <path d="M90,358 C 180,357 250,354 300,348 L300,360 L90,360 Z" fill="#FCA5A5" opacity="0.55"/>
+
+  <!-- z band markers -->
+  <g>
+    <line x1="300" y1="130" x2="300" y2="360" stroke="#ef4444" stroke-width="1.5" stroke-dasharray="4 4"/>
+    <text x="300" y="120" class="band" fill="#dc2626" text-anchor="middle">z &lt; -2</text>
+    <text x="235" y="300" class="band" fill="#b91c1c">神票</text>
+    <text x="210" y="320" class="note">比過去 ~97%+ 便宜</text>
+  </g>
+  <g>
+    <line x1="400" y1="150" x2="400" y2="360" stroke="#f59e0b" stroke-width="1.5" stroke-dasharray="4 4"/>
+    <text x="400" y="140" class="band" fill="#d97706" text-anchor="middle">z &lt; -1.5</text>
+    <text x="345" y="260" class="band" fill="#d97706">很便宜</text>
+  </g>
+
+  <!-- today's fare marker -->
+  <circle cx="300" cy="348" r="8" fill="#f97316" stroke="#fff" stroke-width="2"/>
+  <text x="300" y="398" class="band" fill="#f97316" text-anchor="middle">今天這張票</text>
+
+  <!-- explanation box -->
+  <rect x="90" y="446" width="860" height="42" rx="10" fill="#F9FAFB" stroke="#E5E7EB"/>
+  <text x="110" y="472" class="lbl">z-score = (今天票價 − 歷史平均) ÷ 歷史標準差。越負 = 越偏離常態 = 越異常便宜。每條路線各自算，才公平。</text>
+</svg>

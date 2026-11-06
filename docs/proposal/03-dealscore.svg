@@ -1,0 +1,51 @@
+<svg viewBox="0 0 1040 400" xmlns="http://www.w3.org/2000/svg" font-family="'Helvetica Neue',Arial,'PingFang TC','Microsoft JhengHei',sans-serif">
+  <defs>
+    <style>
+      .title{font-size:24px;font-weight:700;fill:#1f2937}
+      .sub{font-size:13px;fill:#6b7280}
+      .seg{font-size:14px;font-weight:700;fill:#ffffff}
+      .segsub{font-size:11px;fill:#ffffff;opacity:0.9}
+      .lbl{font-size:13px;fill:#374151}
+      .note{font-size:12px;fill:#6b7280}
+    </style>
+  </defs>
+  <rect width="1040" height="400" fill="#ffffff"/>
+  <text x="40" y="46" class="title">Deal Score — 一張票值不值得衝的綜合分數</text>
+  <text x="40" y="70" class="sub">加權公式；每段的寬度 = 它對最終分數的實際貢獻（0～100）</text>
+
+  <!-- stacked bar -->
+  <g>
+    <!-- anomaly 0.45 -->
+    <rect x="40" y="110" width="432" height="70" fill="#f97316"/>
+    <text x="256" y="142" class="seg" text-anchor="middle">異常程度</text>
+    <text x="256" y="162" class="segsub" text-anchor="middle">權重 0.45</text>
+    <!-- price 0.25 -->
+    <rect x="472" y="110" width="240" height="70" fill="#10b981"/>
+    <text x="592" y="142" class="seg" text-anchor="middle">絕對價格</text>
+    <text x="592" y="162" class="segsub" text-anchor="middle">0.25</text>
+    <!-- quality 0.20 -->
+    <rect x="712" y="110" width="192" height="70" fill="#3b82f6"/>
+    <text x="808" y="142" class="seg" text-anchor="middle">航班品質</text>
+    <text x="808" y="162" class="segsub" text-anchor="middle">0.20</text>
+    <!-- feasibility 0.10 -->
+    <rect x="904" y="110" width="96" height="70" fill="#8b5cf6"/>
+    <text x="952" y="142" class="seg" text-anchor="middle">可行性</text>
+    <text x="952" y="162" class="segsub" text-anchor="middle">0.10</text>
+  </g>
+
+  <!-- descriptions -->
+  <g>
+    <circle cx="52" cy="226" r="6" fill="#f97316"/>
+    <text x="66" y="231" class="lbl">異常程度：z-score 偏離歷史常態多少（這就是「雷達」的核心）</text>
+    <circle cx="52" cy="256" r="6" fill="#10b981"/>
+    <text x="66" y="261" class="lbl">絕對價格：就算異常，太貴也衝不下去 — 用實際金額校正</text>
+    <circle cx="52" cy="286" r="6" fill="#3b82f6"/>
+    <text x="66" y="291" class="lbl">航班品質：轉機、紅眼、廉航無行李、偏遠機場、價格過期 → 扣分</text>
+    <circle cx="52" cy="316" r="6" fill="#8b5cf6"/>
+    <text x="66" y="321" class="lbl">可行性：是否免簽、週末出發不用請假（請假天數作參考因子）</text>
+  </g>
+
+  <!-- formula -->
+  <rect x="40" y="348" width="960" height="36" rx="9" fill="#111827"/>
+  <text x="60" y="372" font-size="14" fill="#fbbf24" font-family="monospace">Deal Score = 0.45·異常 + 0.25·價格 + 0.20·品質 + 0.10·可行性   （Phase 0 規則式，不需訓練模型）</text>
+</svg>

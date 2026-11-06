@@ -1,0 +1,88 @@
+<svg viewBox="0 0 1040 470" xmlns="http://www.w3.org/2000/svg" font-family="'Helvetica Neue',Arial,'PingFang TC','Microsoft JhengHei',sans-serif">
+  <defs>
+    <marker id="arrow" markerWidth="10" markerHeight="10" refX="7" refY="3" orient="auto">
+      <path d="M0,0 L7,3 L0,6 Z" fill="#9ca3af"/>
+    </marker>
+    <style>
+      .title{font-size:24px;font-weight:700;fill:#1f2937}
+      .sub{font-size:13px;fill:#6b7280}
+      .stage{font-size:15px;font-weight:700;fill:#1f2937}
+      .line{font-size:12px;fill:#4b5563}
+      .tag{font-size:11px;font-weight:600}
+      .step{font-size:12px;font-weight:700;fill:#f97316}
+    </style>
+  </defs>
+  <rect width="1040" height="470" fill="#ffffff"/>
+  <text x="40" y="46" class="title">FareAnomaly — 系統流程</text>
+  <text x="40" y="70" class="sub">每天自動抓票價 → 累積歷史基準 → 用統計找「異常便宜」→ 排名呈現並通知</text>
+
+  <!-- Stage boxes -->
+  <!-- 1 -->
+  <g>
+    <rect x="40" y="110" width="170" height="150" rx="12" fill="#FFF7ED" stroke="#FDBA74"/>
+    <text x="56" y="106" class="step">① 資料源</text>
+    <text x="60" y="140" class="stage">票價 API</text>
+    <text x="60" y="166" class="line">• TalorData</text>
+    <text x="72" y="184" class="line" font-size="11">(Google Flights 即時)</text>
+    <text x="60" y="206" class="line">• Travelpayouts</text>
+    <text x="72" y="224" class="line" font-size="11">(本機補充)</text>
+    <text x="60" y="248" class="line" font-size="11" fill="#9ca3af">TPE/TSA/KHH 出發</text>
+  </g>
+  <!-- 2 -->
+  <g>
+    <rect x="250" y="110" width="170" height="150" rx="12" fill="#F9FAFB" stroke="#E5E7EB"/>
+    <text x="266" y="106" class="step">② 每日排程</text>
+    <text x="270" y="140" class="stage">GitHub Actions</text>
+    <text x="270" y="166" class="line">每天 09:00 (台灣)</text>
+    <text x="270" y="188" class="line">cron 自動執行</text>
+    <text x="270" y="214" class="line">含重試機制：</text>
+    <text x="282" y="232" class="line" font-size="11">間歇失敗→重試</text>
+    <text x="282" y="250" class="line" font-size="11">認證錯誤→立即停</text>
+  </g>
+  <!-- 3 -->
+  <g>
+    <rect x="460" y="110" width="170" height="150" rx="12" fill="#F9FAFB" stroke="#E5E7EB"/>
+    <text x="476" y="106" class="step">③ 歷史快照</text>
+    <text x="480" y="140" class="stage">每日 JSON</text>
+    <text x="480" y="166" class="line">data/snapshots/</text>
+    <text x="492" y="184" class="line" font-size="11">YYYY-MM-DD.json</text>
+    <text x="480" y="210" class="line">commit 回 repo</text>
+    <text x="480" y="232" class="line">逐日累積成</text>
+    <text x="480" y="250" class="line">時間序列基準</text>
+  </g>
+  <!-- 4 -->
+  <g>
+    <rect x="670" y="110" width="170" height="150" rx="12" fill="#FFF7ED" stroke="#FDBA74"/>
+    <text x="686" y="106" class="step">④ 異常偵測</text>
+    <text x="690" y="140" class="stage">評分引擎</text>
+    <text x="690" y="166" class="line">z-score vs 歷史</text>
+    <text x="690" y="188" class="line">百分位 (贏過 N%)</text>
+    <text x="690" y="210" class="line">Deal Score</text>
+    <text x="690" y="232" class="line" font-size="11">= 異常·價格·品質</text>
+    <text x="702" y="250" class="line" font-size="11">·可行性 加權</text>
+  </g>
+  <!-- 5 -->
+  <g>
+    <rect x="880" y="110" width="150" height="150" rx="12" fill="#F9FAFB" stroke="#E5E7EB"/>
+    <text x="896" y="106" class="step">⑤ 呈現</text>
+    <text x="900" y="140" class="stage">Next.js</text>
+    <text x="900" y="166" class="line">今日神票榜</text>
+    <text x="900" y="188" class="line">篩選 + 詳情</text>
+    <text x="900" y="214" class="line">票價雷達</text>
+    <text x="912" y="232" class="line" font-size="11">LINE/Email</text>
+    <text x="912" y="250" class="line" font-size="11">到價通知</text>
+  </g>
+
+  <!-- arrows -->
+  <line x1="212" y1="185" x2="247" y2="185" stroke="#9ca3af" stroke-width="2" marker-end="url(#arrow)"/>
+  <line x1="422" y1="185" x2="457" y2="185" stroke="#9ca3af" stroke-width="2" marker-end="url(#arrow)"/>
+  <line x1="632" y1="185" x2="667" y2="185" stroke="#9ca3af" stroke-width="2" marker-end="url(#arrow)"/>
+  <line x1="842" y1="185" x2="877" y2="185" stroke="#9ca3af" stroke-width="2" marker-end="url(#arrow)"/>
+
+  <!-- status bar -->
+  <rect x="40" y="300" width="990" height="130" rx="12" fill="#F0FDF4" stroke="#BBF7D0"/>
+  <text x="60" y="330" class="stage" fill="#15803d">目前進度（可行性已驗證）</text>
+  <text x="60" y="360" class="line">✅ Phase 0：假資料 dashboard 已完成（排名／Deal Score 拆解／篩選／票價雷達 UI 皆可互動）</text>
+  <text x="60" y="384" class="line">✅ Phase 1：每日抓取腳本 + GitHub Actions 排程已實跑成功，TalorData 12 條路線 × 2 天期 = 24/24 全命中（含長途）</text>
+  <text x="60" y="408" class="line">🔧 待辦：USD→TWD 換匯、累積足夠天數後接上 z-score 真實基準、dashboard 改讀真實快照</text>
+</svg>
