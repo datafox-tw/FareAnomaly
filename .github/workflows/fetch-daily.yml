@@ -6,6 +6,7 @@ name: Daily fare snapshot
 on:
   schedule:
     - cron: "0 1 * * *" # 01:00 UTC = 09:00 台灣時間
+    - cron: "0 8 * * *" # 08:00 UTC = 16:00 台灣時間（補洞：同日快照加性合併）
   workflow_dispatch: # 也可在 Actions 頁手動觸發（可覆寫範圍，省額度測試用）
     inputs:
       only:
