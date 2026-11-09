@@ -13,6 +13,8 @@
 //   TRIP_LEN    旅程天數（回程=出發+此值），預設 7
 //   CURRENCY    要求幣別，預設 twd（註：TalorData 實測仍回 USD，見研究文件）
 //   ONLY        talor | tp | both（預設 both）
+//   TALOR_RETRY 單次查詢重試次數（指數退避），預設 7
+//   EXTRA_PASSES 全部跑完後對失敗槽位的補抓輪數，預設 2
 
 import { writeFile, mkdir } from "node:fs/promises";
 import { existsSync, readFileSync } from "node:fs";
@@ -187,7 +189,7 @@ async function run() {
         if (r.ok && r.offers.length) tpHit++;
       }
 
-      queries.push({ ...w, sources });
+      queries.push({ ...w, sources, _dest: dest.code });
     }
     routes.push({ destination: dest.code, city: dest.city, region: dest.region, queries });
 
@@ -200,6 +202,32 @@ async function run() {
       parts.push(`TP ${last.travelpayouts.ok ? `${last.travelpayouts.offerCount}筆/最低${last.travelpayouts.minPrice ?? "—"}` : "✗"}`);
     console.log(`  ${ORIGIN}→${dest.code} ${dest.city}: ${parts.join(" · ")}`);
   }
+
+  // 第二輪：把失敗/空結果的 Talor 槽位再補抓（上游間歇性失敗，隔一段時間常會恢復）。
+  const PASSES = Number(process.env.EXTRA_PASSES ?? 2);
+  for (let pass = 1; pass <= PASSES && useTalor; pass++) {
+    const missing = [];
+    for (const r of routes)
+      for (const q of r.queries)
+        if (!srcOk(q.sources.talordata)) missing.push(q);
+    if (!missing.length) break;
+    console.log(`\n補抓第 ${pass} 輪：${missing.length} 個槽位失敗，等 20 秒後重試…`);
+    await new Promise((r) => setTimeout(r, 20000));
+    for (const q of missing) {
+      const res = await fetchTalor({
+        origin: ORIGIN,
+        dest: q._dest,
+        outbound: q.outboundDate,
+        ret: q.returnDate,
+        currency: CURRENCY,
+      });
+      const sum = summarize(res);
+      if (srcOk(sum) || !q.sources.talordata) q.sources.talordata = sum;
+      if (srcOk(sum)) talorHit++;
+      console.log(`  ${ORIGIN}→${q._dest} ${q.leadDays}d: ${srcOk(sum) ? "✓ 補到" : "✗"}`);
+    }
+  }
+  for (const r of routes) for (const q of r.queries) delete q._dest;
 
   const snapshot = {
     capturedAt,

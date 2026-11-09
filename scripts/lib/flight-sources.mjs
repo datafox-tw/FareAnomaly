@@ -29,6 +29,8 @@ export function parsePrice(v) {
 }
 
 const sleep = (ms) => new Promise((r) => setTimeout(r, ms));
+// 指數退避：1.5s, 3s, 6s, 12s…（上限 15s），給上游喘息時間。
+const backoff = (attempt) => Math.min(1500 * 2 ** (attempt - 1), 15000);
 
 // ---------- TalorData（Google Flights SERP）----------
 // 即時爬取，會間歇性失敗（code 300 "error, not search"，不計費）→ 重試。
@@ -40,7 +42,7 @@ export async function fetchTalor({
   ret,
   currency = "TWD",
   token = process.env.TALOR_TOKEN,
-  retry = 4,
+  retry = Number(process.env.TALOR_RETRY || 7),
 }) {
   if (!token) return { ok: false, source: "talordata", error: "no token" };
   const body = new URLSearchParams({
@@ -69,12 +71,12 @@ export async function fetchTalor({
       json = await res.json().catch(() => null);
       if (!res.ok || !json) {
         lastErr = `HTTP ${res.status}`;
-        await sleep(1500);
+        await sleep(backoff(attempt));
         continue;
       }
     } catch (e) {
       lastErr = e.message;
-      await sleep(1500);
+      await sleep(backoff(attempt));
       continue;
     }
 
@@ -104,7 +106,7 @@ export async function fetchTalor({
     if (json.code === 401 || json.code === 403 || json.code === 400) {
       return { ok: false, source: "talordata", error: lastErr, attempts: attempt };
     }
-    if (attempt < retry) await sleep(1500);
+    if (attempt < retry) await sleep(backoff(attempt));
   }
   return { ok: false, source: "talordata", error: `${lastErr}（重試 ${retry} 次）`, attempts: retry };
 }
