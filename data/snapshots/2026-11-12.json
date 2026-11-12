@@ -1,0 +1,1532 @@
+{
+  "capturedAt": "2026-11-12T07:59:18.319Z",
+  "captureDate": "2026-11-12",
+  "origin": "TPE",
+  "tripLength": 7,
+  "requestedCurrency": "TWD",
+  "note": "TalorData 價格實測回 USD；requestedCurrency 僅記錄請求值，實際幣別見各 source.currency。",
+  "routes": [
+    {
+      "destination": "NRT",
+      "city": "東京成田",
+      "region": "日本",
+      "queries": [
+        {
+          "leadDays": 30,
+          "outboundDate": "2026-12-12",
+          "returnDate": "2026-12-19",
+          "sources": {
+            "talordata": {
+              "ok": true,
+              "currency": "USD?",
+              "offerCount": 22,
+              "minPrice": 278,
+              "cheapest": {
+                "price": 278,
+                "airline": "Peach Aviation",
+                "direct": true,
+                "stops": 0
+              },
+              "top": [
+                {
+                  "price": 278,
+                  "priceRaw": "$278",
+                  "airline": "Peach Aviation",
+                  "direct": true,
+                  "stops": 0,
+                  "departAt": "2026-12-12 17:15"
+                },
+                {
+                  "price": 315,
+                  "priceRaw": "$315",
+                  "airline": "Scoot",
+                  "direct": true,
+                  "stops": 0,
+                  "departAt": "2026-12-12 6:50"
+                },
+                {
+                  "price": 315,
+                  "priceRaw": "$315",
+                  "airline": "Scoot",
+                  "direct": true,
+                  "stops": 0,
+                  "departAt": "2026-12-12 14:25"
+                },
+                {
+                  "price": 316,
+                  "priceRaw": "$316",
+                  "airline": "Tigerair Taiwan",
+                  "direct": true,
+                  "stops": 0,
+                  "departAt": "2026-12-12 13:30"
+                },
+                {
+                  "price": 323,
+                  "priceRaw": "$323",
+                  "airline": "Jetstar",
+                  "direct": true,
+                  "stops": 0,
+                  "departAt": "2026-12-12 12:50"
+                }
+              ],
+              "attempts": 1
+            }
+          }
+        },
+        {
+          "leadDays": 60,
+          "outboundDate": "2027-01-11",
+          "returnDate": "2027-01-18",
+          "sources": {
+            "talordata": {
+              "ok": true,
+              "currency": "USD?",
+              "offerCount": 24,
+              "minPrice": 313,
+              "cheapest": {
+                "price": 313,
+                "airline": "Scoot",
+                "direct": true,
+                "stops": 0
+              },
+              "top": [
+                {
+                  "price": 313,
+                  "priceRaw": "$313",
+                  "airline": "Scoot",
+                  "direct": true,
+                  "stops": 0,
+                  "departAt": "2027-1-11 6:50"
+                },
+                {
+                  "price": 345,
+                  "priceRaw": "$345",
+                  "airline": "Tigerair Taiwan",
+                  "direct": true,
+                  "stops": 0,
+                  "departAt": "2027-1-11 6:35"
+                },
+                {
+                  "price": 350,
+                  "priceRaw": "$350",
+                  "airline": "Jetstar",
+                  "direct": true,
+                  "stops": 0,
+                  "departAt": "2027-1-11 12:50"
+                },
+                {
+                  "price": 383,
+                  "priceRaw": "$383",
+                  "airline": "Peach Aviation",
+                  "direct": true,
+                  "stops": 0,
+                  "departAt": "2027-1-11 17:15"
+                },
+                {
+                  "price": 402,
+                  "priceRaw": "$402",
+                  "airline": "Thai Lion Air",
+                  "direct": true,
+                  "stops": 0,
+                  "departAt": "2027-1-11 13:00"
+                }
+              ],
+              "attempts": 2
+            }
+          }
+        }
+      ]
+    },
+    {
+      "destination": "ICN",
+      "city": "首爾仁川",
+      "region": "韓國",
+      "queries": [
+        {
+          "leadDays": 30,
+          "outboundDate": "2026-12-12",
+          "returnDate": "2026-12-19",
+          "sources": {
+            "talordata": {
+              "ok": true,
+              "currency": "USD?",
+              "offerCount": 12,
+              "minPrice": 252,
+              "cheapest": {
+                "price": 252,
+                "airline": "Tigerair Taiwan",
+                "direct": true,
+                "stops": 0
+              },
+              "top": [
+                {
+                  "price": 252,
+                  "priceRaw": "$252",
+                  "airline": "Tigerair Taiwan",
+                  "direct": true,
+                  "stops": 0,
+                  "departAt": "2026-12-12 20:00"
+                },
+                {
+                  "price": 261,
+                  "priceRaw": "$261",
+                  "airline": "Scoot",
+                  "direct": true,
+                  "stops": 0,
+                  "departAt": "2026-12-12 18:10"
+                },
+                {
+                  "price": 301,
+                  "priceRaw": "$301",
+                  "airline": "Korean Air",
+                  "direct": true,
+                  "stops": 0,
+                  "departAt": "2026-12-12 19:25"
+                },
+                {
+                  "price": 325,
+                  "priceRaw": "$325",
+                  "airline": "China Airlines",
+                  "direct": true,
+                  "stops": 0,
+                  "departAt": "2026-12-12 15:40"
+                },
+                {
+                  "price": 337,
+                  "priceRaw": "$337",
+                  "airline": "EVA Air",
+                  "direct": true,
+                  "stops": 0,
+                  "departAt": "2026-12-12 15:15"
+                }
+              ],
+              "attempts": 1
+            }
+          }
+        },
+        {
+          "leadDays": 60,
+          "outboundDate": "2027-01-11",
+          "returnDate": "2027-01-18",
+          "sources": {
+            "talordata": {
+              "ok": true,
+              "currency": "USD?",
+              "offerCount": 15,
+              "minPrice": 280,
+              "cheapest": {
+                "price": 280,
+                "airline": "Hong Kong Express / Hong Kong Express",
+                "direct": false,
+                "stops": 1
+              },
+              "top": [
+                {
+                  "price": 280,
+                  "priceRaw": "$280",
+                  "airline": "Hong Kong Express / Hong Kong Express",
+                  "direct": false,
+                  "stops": 1,
+                  "departAt": "2027-1-11 14:50"
+                },
+                {
+                  "price": 292,
+                  "priceRaw": "$292",
+                  "airline": "Scoot",
+                  "direct": true,
+                  "stops": 0,
+                  "departAt": "2027-1-11 18:10"
+                },
+                {
+                  "price": 295,
+                  "priceRaw": "$295",
+                  "airline": "Tigerair Taiwan",
+                  "direct": true,
+                  "stops": 0,
+                  "departAt": "2027-1-11 20:00"
+                },
+                {
+                  "price": 297,
+                  "priceRaw": "$297",
+                  "airline": "Hong Kong Express / Hong Kong Express",
+                  "direct": false,
+                  "stops": 1,
+                  "departAt": "2027-1-11 17:40"
+                },
+                {
+                  "price": 325,
+                  "priceRaw": "$325",
+                  "airline": "China Airlines",
+                  "direct": true,
+                  "stops": 0,
+                  "departAt": "2027-1-11 15:40"
+                }
+              ],
+              "attempts": 2
+            }
+          }
+        }
+      ]
+    },
+    {
+      "destination": "KIX",
+      "city": "大阪關西",
+      "region": "日本",
+      "queries": [
+        {
+          "leadDays": 30,
+          "outboundDate": "2026-12-12",
+          "returnDate": "2026-12-19",
+          "sources": {
+            "talordata": {
+              "ok": true,
+              "currency": "USD?",
+              "offerCount": 19,
+              "minPrice": 257,
+              "cheapest": {
+                "price": 257,
+                "airline": "Peach Aviation",
+                "direct": true,
+                "stops": 0
+              },
+              "top": [
+                {
+                  "price": 257,
+                  "priceRaw": "$257",
+                  "airline": "Peach Aviation",
+                  "direct": true,
+                  "stops": 0,
+                  "departAt": "2026-12-12 13:40"
+                },
+                {
+                  "price": 257,
+                  "priceRaw": "$257",
+                  "airline": "Peach Aviation",
+                  "direct": true,
+                  "stops": 0,
+                  "departAt": "2026-12-12 18:50"
+                },
+                {
+                  "price": 277,
+                  "priceRaw": "$277",
+                  "airline": "Jetstar",
+                  "direct": true,
+                  "stops": 0,
+                  "departAt": "2026-12-12 18:15"
+                },
+                {
+                  "price": 289,
+                  "priceRaw": "$289",
+                  "airline": "Thai Lion Air",
+                  "direct": true,
+                  "stops": 0,
+                  "departAt": "2026-12-12 9:00"
+                },
+                {
+                  "price": 309,
+                  "priceRaw": "$309",
+                  "airline": "Peach Aviation",
+                  "direct": true,
+                  "stops": 0,
+                  "departAt": "2026-12-12 9:40"
+                }
+              ],
+              "attempts": 2
+            }
+          }
+        },
+        {
+          "leadDays": 60,
+          "outboundDate": "2027-01-11",
+          "returnDate": "2027-01-18",
+          "sources": {
+            "talordata": {
+              "ok": true,
+              "currency": "USD?",
+              "offerCount": 20,
+              "minPrice": 285,
+              "cheapest": {
+                "price": 285,
+                "airline": "Trinity Airways / Trinity Airways",
+                "direct": false,
+                "stops": 1
+              },
+              "top": [
+                {
+                  "price": 285,
+                  "priceRaw": "$285",
+                  "airline": "Trinity Airways / Trinity Airways",
+                  "direct": false,
+                  "stops": 1,
+                  "departAt": "2027-1-11 1:55"
+                },
+                {
+                  "price": 320,
+                  "priceRaw": "$320",
+                  "airline": "Peach Aviation",
+                  "direct": true,
+                  "stops": 0,
+                  "departAt": "2027-1-11 9:40"
+                },
+                {
+                  "price": 325,
+                  "priceRaw": "$325",
+                  "airline": "AirAsia",
+                  "direct": true,
+                  "stops": 0,
+                  "departAt": "2027-1-11 5:55"
+                },
+                {
+                  "price": 326,
+                  "priceRaw": "$326",
+                  "airline": "Tigerair Taiwan",
+                  "direct": true,
+                  "stops": 0,
+                  "departAt": "2027-1-11 7:00"
+                },
+                {
+                  "price": 326,
+                  "priceRaw": "$326",
+                  "airline": "Jetstar",
+                  "direct": true,
+                  "stops": 0,
+                  "departAt": "2027-1-11 2:30"
+                }
+              ],
+              "attempts": 1
+            }
+          }
+        }
+      ]
+    },
+    {
+      "destination": "OKA",
+      "city": "沖繩那霸",
+      "region": "日本",
+      "queries": [
+        {
+          "leadDays": 30,
+          "outboundDate": "2026-12-12",
+          "returnDate": "2026-12-19",
+          "sources": {
+            "talordata": {
+              "ok": true,
+              "currency": "USD?",
+              "offerCount": 11,
+              "minPrice": 158,
+              "cheapest": {
+                "price": 158,
+                "airline": "Tigerair Taiwan",
+                "direct": true,
+                "stops": 0
+              },
+              "top": [
+                {
+                  "price": 158,
+                  "priceRaw": "$158",
+                  "airline": "Tigerair Taiwan",
+                  "direct": true,
+                  "stops": 0,
+                  "departAt": "2026-12-12 18:20"
+                },
+                {
+                  "price": 190,
+                  "priceRaw": "$190",
+                  "airline": "Peach Aviation",
+                  "direct": true,
+                  "stops": 0,
+                  "departAt": "2026-12-12 15:20"
+                },
+                {
+                  "price": 190,
+                  "priceRaw": "$190",
+                  "airline": "Peach Aviation",
+                  "direct": true,
+                  "stops": 0,
+                  "departAt": "2026-12-12 18:20"
+                },
+                {
+                  "price": 211,
+                  "priceRaw": "$211",
+                  "airline": "Peach Aviation",
+                  "direct": true,
+                  "stops": 0,
+                  "departAt": "2026-12-12 9:45"
+                },
+                {
+                  "price": 215,
+                  "priceRaw": "$215",
+                  "airline": "Tigerair Taiwan",
+                  "direct": true,
+                  "stops": 0,
+                  "departAt": "2026-12-12 6:35"
+                }
+              ],
+              "attempts": 2
+            }
+          }
+        },
+        {
+          "leadDays": 60,
+          "outboundDate": "2027-01-11",
+          "returnDate": "2027-01-18",
+          "sources": {
+            "talordata": {
+              "ok": true,
+              "currency": "USD?",
+              "offerCount": 12,
+              "minPrice": 168,
+              "cheapest": {
+                "price": 168,
+                "airline": "Thai Lion Air",
+                "direct": true,
+                "stops": 0
+              },
+              "top": [
+                {
+                  "price": 168,
+                  "priceRaw": "$168",
+                  "airline": "Thai Lion Air",
+                  "direct": true,
+                  "stops": 0,
+                  "departAt": "2027-1-11 9:00"
+                },
+                {
+                  "price": 169,
+                  "priceRaw": "$169",
+                  "airline": "Peach Aviation",
+                  "direct": true,
+                  "stops": 0,
+                  "departAt": "2027-1-11 15:20"
+                },
+                {
+                  "price": 169,
+                  "priceRaw": "$169",
+                  "airline": "Peach Aviation",
+                  "direct": true,
+                  "stops": 0,
+                  "departAt": "2027-1-11 18:20"
+                },
+                {
+                  "price": 190,
+                  "priceRaw": "$190",
+                  "airline": "Peach Aviation",
+                  "direct": true,
+                  "stops": 0,
+                  "departAt": "2027-1-11 9:45"
+                },
+                {
+                  "price": 209,
+                  "priceRaw": "$209",
+                  "airline": "Tigerair Taiwan",
+                  "direct": true,
+                  "stops": 0,
+                  "departAt": "2027-1-11 6:35"
+                }
+              ],
+              "attempts": 2
+            }
+          }
+        }
+      ]
+    },
+    {
+      "destination": "BKK",
+      "city": "曼谷",
+      "region": "東南亞",
+      "queries": [
+        {
+          "leadDays": 30,
+          "outboundDate": "2026-12-12",
+          "returnDate": "2026-12-19",
+          "sources": {
+            "talordata": {
+              "ok": true,
+              "currency": "USD?",
+              "offerCount": 18,
+              "minPrice": 296,
+              "cheapest": {
+                "price": 296,
+                "airline": "China Southern / China Southern",
+                "direct": false,
+                "stops": 1
+              },
+              "top": [
+                {
+                  "price": 296,
+                  "priceRaw": "$296",
+                  "airline": "China Southern / China Southern",
+                  "direct": false,
+                  "stops": 1,
+                  "departAt": "2026-12-12 13:40"
+                },
+                {
+                  "price": 296,
+                  "priceRaw": "$296",
+                  "airline": "China Southern / China Southern",
+                  "direct": false,
+                  "stops": 1,
+                  "departAt": "2026-12-12 15:30"
+                },
+                {
+                  "price": 319,
+                  "priceRaw": "$319",
+                  "airline": "EVA Air",
+                  "direct": true,
+                  "stops": 0,
+                  "departAt": "2026-12-12 8:25"
+                },
+                {
+                  "price": 319,
+                  "priceRaw": "$319",
+                  "airline": "EVA Air",
+                  "direct": true,
+                  "stops": 0,
+                  "departAt": "2026-12-12 20:45"
+                },
+                {
+                  "price": 326,
+                  "priceRaw": "$326",
+                  "airline": "China Airlines",
+                  "direct": true,
+                  "stops": 0,
+                  "departAt": "2026-12-12 22:30"
+                }
+              ],
+              "attempts": 3
+            }
+          }
+        },
+        {
+          "leadDays": 60,
+          "outboundDate": "2027-01-11",
+          "returnDate": "2027-01-18",
+          "sources": {
+            "talordata": {
+              "ok": true,
+              "currency": "USD?",
+              "offerCount": 16,
+              "minPrice": 296,
+              "cheapest": {
+                "price": 296,
+                "airline": "China Southern / China Southern",
+                "direct": false,
+                "stops": 1
+              },
+              "top": [
+                {
+                  "price": 296,
+                  "priceRaw": "$296",
+                  "airline": "China Southern / China Southern",
+                  "direct": false,
+                  "stops": 1,
+                  "departAt": "2027-1-11 15:30"
+                },
+                {
+                  "price": 307,
+                  "priceRaw": "$307",
+                  "airline": "China Airlines",
+                  "direct": true,
+                  "stops": 0,
+                  "departAt": "2027-1-11 22:30"
+                },
+                {
+                  "price": 318,
+                  "priceRaw": "$318",
+                  "airline": "STARLUX Airlines",
+                  "direct": true,
+                  "stops": 0,
+                  "departAt": "2027-1-11 13:25"
+                },
+                {
+                  "price": 319,
+                  "priceRaw": "$319",
+                  "airline": "EVA Air",
+                  "direct": true,
+                  "stops": 0,
+                  "departAt": "2027-1-11 9:45"
+                },
+                {
+                  "price": 319,
+                  "priceRaw": "$319",
+                  "airline": "EVA Air",
+                  "direct": true,
+                  "stops": 0,
+                  "departAt": "2027-1-11 20:45"
+                }
+              ],
+              "attempts": 1
+            }
+          }
+        }
+      ]
+    },
+    {
+      "destination": "SIN",
+      "city": "新加坡",
+      "region": "東南亞",
+      "queries": [
+        {
+          "leadDays": 30,
+          "outboundDate": "2026-12-12",
+          "returnDate": "2026-12-19",
+          "sources": {
+            "talordata": {
+              "ok": true,
+              "currency": "USD?",
+              "offerCount": 11,
+              "minPrice": 388,
+              "cheapest": {
+                "price": 388,
+                "airline": "Scoot",
+                "direct": true,
+                "stops": 0
+              },
+              "top": [
+                {
+                  "price": 388,
+                  "priceRaw": "$388",
+                  "airline": "Scoot",
+                  "direct": true,
+                  "stops": 0,
+                  "departAt": "2026-12-12 0:15"
+                },
+                {
+                  "price": 404,
+                  "priceRaw": "$404",
+                  "airline": "Scoot",
+                  "direct": true,
+                  "stops": 0,
+                  "departAt": "2026-12-12 1:50"
+                },
+                {
+                  "price": 457,
+                  "priceRaw": "$457",
+                  "airline": "Scoot",
+                  "direct": true,
+                  "stops": 0,
+                  "departAt": "2026-12-12 23:20"
+                },
+                {
+                  "price": 538,
+                  "priceRaw": "$538",
+                  "airline": "Scoot",
+                  "direct": true,
+                  "stops": 0,
+                  "departAt": "2026-12-12 16:40"
+                },
+                {
+                  "price": 603,
+                  "priceRaw": "$603",
+                  "airline": "EVA Air",
+                  "direct": true,
+                  "stops": 0,
+                  "departAt": "2026-12-12 7:25"
+                }
+              ],
+              "attempts": 4
+            }
+          }
+        },
+        {
+          "leadDays": 60,
+          "outboundDate": "2027-01-11",
+          "returnDate": "2027-01-18",
+          "sources": {
+            "talordata": {
+              "ok": true,
+              "currency": "USD?",
+              "offerCount": 13,
+              "minPrice": 258,
+              "cheapest": {
+                "price": 258,
+                "airline": "Vietjet / Vietjet",
+                "direct": false,
+                "stops": 1
+              },
+              "top": [
+                {
+                  "price": 258,
+                  "priceRaw": "$258",
+                  "airline": "Vietjet / Vietjet",
+                  "direct": false,
+                  "stops": 1,
+                  "departAt": "2027-1-11 19:00"
+                },
+                {
+                  "price": 286,
+                  "priceRaw": "$286",
+                  "airline": "Scoot",
+                  "direct": true,
+                  "stops": 0,
+                  "departAt": "2027-1-11 1:50"
+                },
+                {
+                  "price": 286,
+                  "priceRaw": "$286",
+                  "airline": "Scoot",
+                  "direct": true,
+                  "stops": 0,
+                  "departAt": "2027-1-11 0:10"
+                },
+                {
+                  "price": 306,
+                  "priceRaw": "$306",
+                  "airline": "Scoot",
+                  "direct": true,
+                  "stops": 0,
+                  "departAt": "2027-1-11 23:20"
+                },
+                {
+                  "price": 309,
+                  "priceRaw": "$309",
+                  "airline": "China Airlines",
+                  "direct": true,
+                  "stops": 0,
+                  "departAt": "2027-1-11 19:55"
+                }
+              ],
+              "attempts": 2
+            }
+          }
+        }
+      ]
+    },
+    {
+      "destination": "CTS",
+      "city": "札幌新千歲",
+      "region": "日本",
+      "queries": [
+        {
+          "leadDays": 30,
+          "outboundDate": "2026-12-12",
+          "returnDate": "2026-12-19",
+          "sources": {
+            "talordata": {
+              "ok": true,
+              "currency": "USD?",
+              "offerCount": 8,
+              "minPrice": 382,
+              "cheapest": {
+                "price": 382,
+                "airline": "Jetstar / Jetstar",
+                "direct": false,
+                "stops": 1
+              },
+              "top": [
+                {
+                  "price": 382,
+                  "priceRaw": "$382",
+                  "airline": "Jetstar / Jetstar",
+                  "direct": false,
+                  "stops": 1,
+                  "departAt": "2026-12-12 18:15"
+                },
+                {
+                  "price": 467,
+                  "priceRaw": "$467",
+                  "airline": "Tigerair Taiwan",
+                  "direct": true,
+                  "stops": 0,
+                  "departAt": "2026-12-12 6:20"
+                },
+                {
+                  "price": 510,
+                  "priceRaw": "$510",
+                  "airline": "Scoot",
+                  "direct": true,
+                  "stops": 0,
+                  "departAt": "2026-12-12 12:15"
+                },
+                {
+                  "price": 551,
+                  "priceRaw": "$551",
+                  "airline": "Thai AirAsia",
+                  "direct": true,
+                  "stops": 0,
+                  "departAt": "2026-12-12 7:15"
+                },
+                {
+                  "price": 724,
+                  "priceRaw": "$724",
+                  "airline": "China Airlines",
+                  "direct": true,
+                  "stops": 0,
+                  "departAt": "2026-12-12 8:35"
+                }
+              ],
+              "attempts": 3
+            }
+          }
+        },
+        {
+          "leadDays": 60,
+          "outboundDate": "2027-01-11",
+          "returnDate": "2027-01-18",
+          "sources": {
+            "talordata": {
+              "ok": true,
+              "currency": "USD?",
+              "offerCount": 10,
+              "minPrice": 386,
+              "cheapest": {
+                "price": 386,
+                "airline": "Scoot",
+                "direct": true,
+                "stops": 0
+              },
+              "top": [
+                {
+                  "price": 386,
+                  "priceRaw": "$386",
+                  "airline": "Scoot",
+                  "direct": true,
+                  "stops": 0,
+                  "departAt": "2027-1-11 12:15"
+                },
+                {
+                  "price": 487,
+                  "priceRaw": "$487",
+                  "airline": "Jetstar / Jetstar",
+                  "direct": false,
+                  "stops": 1,
+                  "departAt": "2027-1-11 12:50"
+                },
+                {
+                  "price": 504,
+                  "priceRaw": "$504",
+                  "airline": "Thai AirAsia",
+                  "direct": true,
+                  "stops": 0,
+                  "departAt": "2027-1-11 7:15"
+                },
+                {
+                  "price": 533,
+                  "priceRaw": "$533",
+                  "airline": "Asiana Airlines / Asiana Airlines",
+                  "direct": false,
+                  "stops": 1,
+                  "departAt": "2027-1-11 17:05"
+                },
+                {
+                  "price": 555,
+                  "priceRaw": "$555",
+                  "airline": "Tigerair Taiwan",
+                  "direct": true,
+                  "stops": 0,
+                  "departAt": "2027-1-11 6:20"
+                }
+              ],
+              "attempts": 1
+            }
+          }
+        }
+      ]
+    },
+    {
+      "destination": "FUK",
+      "city": "福岡",
+      "region": "日本",
+      "queries": [
+        {
+          "leadDays": 30,
+          "outboundDate": "2026-12-12",
+          "returnDate": "2026-12-19",
+          "sources": {
+            "talordata": {
+              "ok": true,
+              "currency": "USD?",
+              "offerCount": 9,
+              "minPrice": 334,
+              "cheapest": {
+                "price": 334,
+                "airline": "Trinity Airways / Trinity Airways",
+                "direct": false,
+                "stops": 1
+              },
+              "top": [
+                {
+                  "price": 334,
+                  "priceRaw": "$334",
+                  "airline": "Trinity Airways / Trinity Airways",
+                  "direct": false,
+                  "stops": 1,
+                  "departAt": "2026-12-12 14:25"
+                },
+                {
+                  "price": 357,
+                  "priceRaw": "$357",
+                  "airline": "Tigerair Taiwan",
+                  "direct": true,
+                  "stops": 0,
+                  "departAt": "2026-12-12 6:45"
+                },
+                {
+                  "price": 395,
+                  "priceRaw": "$395",
+                  "airline": "AirAsia",
+                  "direct": true,
+                  "stops": 0,
+                  "departAt": "2026-12-12 11:55"
+                },
+                {
+                  "price": 414,
+                  "priceRaw": "$414",
+                  "airline": "STARLUX Airlines",
+                  "direct": true,
+                  "stops": 0,
+                  "departAt": "2026-12-12 14:45"
+                },
+                {
+                  "price": 437,
+                  "priceRaw": "$437",
+                  "airline": "EVA Air",
+                  "direct": true,
+                  "stops": 0,
+                  "departAt": "2026-12-12 16:25"
+                }
+              ],
+              "attempts": 2
+            }
+          }
+        },
+        {
+          "leadDays": 60,
+          "outboundDate": "2027-01-11",
+          "returnDate": "2027-01-18",
+          "sources": {
+            "talordata": {
+              "ok": true,
+              "currency": "USD?",
+              "offerCount": 9,
+              "minPrice": 308,
+              "cheapest": {
+                "price": 308,
+                "airline": "Tigerair Taiwan",
+                "direct": true,
+                "stops": 0
+              },
+              "top": [
+                {
+                  "price": 308,
+                  "priceRaw": "$308",
+                  "airline": "Tigerair Taiwan",
+                  "direct": true,
+                  "stops": 0,
+                  "departAt": "2027-1-11 6:45"
+                },
+                {
+                  "price": 323,
+                  "priceRaw": "$323",
+                  "airline": "Tigerair Taiwan",
+                  "direct": true,
+                  "stops": 0,
+                  "departAt": "2027-1-11 13:40"
+                },
+                {
+                  "price": 406,
+                  "priceRaw": "$406",
+                  "airline": "Hong Kong Express / Hong Kong Express",
+                  "direct": false,
+                  "stops": 1,
+                  "departAt": "2027-1-11 14:50"
+                },
+                {
+                  "price": 426,
+                  "priceRaw": "$426",
+                  "airline": "China Airlines",
+                  "direct": true,
+                  "stops": 0,
+                  "departAt": "2027-1-11 6:50"
+                },
+                {
+                  "price": 430,
+                  "priceRaw": "$430",
+                  "airline": "AirAsia",
+                  "direct": true,
+                  "stops": 0,
+                  "departAt": "2027-1-11 12:00"
+                }
+              ],
+              "attempts": 3
+            }
+          }
+        }
+      ]
+    },
+    {
+      "destination": "NGO",
+      "city": "名古屋",
+      "region": "日本",
+      "queries": [
+        {
+          "leadDays": 30,
+          "outboundDate": "2026-12-12",
+          "returnDate": "2026-12-19",
+          "sources": {
+            "talordata": {
+              "ok": true,
+              "currency": "USD?",
+              "offerCount": 8,
+              "minPrice": 388,
+              "cheapest": {
+                "price": 388,
+                "airline": "Hong Kong Express / Hong Kong Express",
+                "direct": false,
+                "stops": 1
+              },
+              "top": [
+                {
+                  "price": 388,
+                  "priceRaw": "$388",
+                  "airline": "Hong Kong Express / Hong Kong Express",
+                  "direct": false,
+                  "stops": 1,
+                  "departAt": "2026-12-12 21:15"
+                },
+                {
+                  "price": 398,
+                  "priceRaw": "$398",
+                  "airline": "China Airlines",
+                  "direct": true,
+                  "stops": 0,
+                  "departAt": "2026-12-12 17:15"
+                },
+                {
+                  "price": 399,
+                  "priceRaw": "$399",
+                  "airline": "Peach Aviation",
+                  "direct": true,
+                  "stops": 0,
+                  "departAt": "2026-12-12 2:55"
+                },
+                {
+                  "price": 406,
+                  "priceRaw": "$406",
+                  "airline": "Tigerair Taiwan",
+                  "direct": true,
+                  "stops": 0,
+                  "departAt": "2026-12-12 8:45"
+                },
+                {
+                  "price": 425,
+                  "priceRaw": "$425",
+                  "airline": "JAL",
+                  "direct": true,
+                  "stops": 0,
+                  "departAt": "2026-12-12 15:50"
+                }
+              ],
+              "attempts": 1
+            }
+          }
+        },
+        {
+          "leadDays": 60,
+          "outboundDate": "2027-01-11",
+          "returnDate": "2027-01-18",
+          "sources": {
+            "talordata": {
+              "ok": true,
+              "currency": "USD?",
+              "offerCount": 8,
+              "minPrice": 374,
+              "cheapest": {
+                "price": 374,
+                "airline": "Hong Kong Express / Hong Kong Express",
+                "direct": false,
+                "stops": 1
+              },
+              "top": [
+                {
+                  "price": 374,
+                  "priceRaw": "$374",
+                  "airline": "Hong Kong Express / Hong Kong Express",
+                  "direct": false,
+                  "stops": 1,
+                  "departAt": "2027-1-11 14:50"
+                },
+                {
+                  "price": 405,
+                  "priceRaw": "$405",
+                  "airline": "Tigerair Taiwan",
+                  "direct": true,
+                  "stops": 0,
+                  "departAt": "2027-1-11 8:45"
+                },
+                {
+                  "price": 406,
+                  "priceRaw": "$406",
+                  "airline": "Peach Aviation",
+                  "direct": true,
+                  "stops": 0,
+                  "departAt": "2027-1-11 2:55"
+                },
+                {
+                  "price": 449,
+                  "priceRaw": "$449",
+                  "airline": "China Airlines",
+                  "direct": true,
+                  "stops": 0,
+                  "departAt": "2027-1-11 17:15"
+                },
+                {
+                  "price": 465,
+                  "priceRaw": "$465",
+                  "airline": "STARLUX Airlines",
+                  "direct": true,
+                  "stops": 0,
+                  "departAt": "2027-1-11 14:55"
+                }
+              ],
+              "attempts": 2
+            }
+          }
+        }
+      ]
+    },
+    {
+      "destination": "CJU",
+      "city": "濟州",
+      "region": "韓國",
+      "queries": [
+        {
+          "leadDays": 30,
+          "outboundDate": "2026-12-12",
+          "returnDate": "2026-12-19",
+          "sources": {
+            "talordata": {
+              "ok": true,
+              "currency": "USD?",
+              "offerCount": 10,
+              "minPrice": 161,
+              "cheapest": {
+                "price": 161,
+                "airline": "Trinity Airways",
+                "direct": true,
+                "stops": 0
+              },
+              "top": [
+                {
+                  "price": 161,
+                  "priceRaw": "$161",
+                  "airline": "Trinity Airways",
+                  "direct": true,
+                  "stops": 0,
+                  "departAt": "2026-12-12 14:25"
+                },
+                {
+                  "price": 191,
+                  "priceRaw": "$191",
+                  "airline": "Tigerair Taiwan",
+                  "direct": true,
+                  "stops": 0,
+                  "departAt": "2026-12-12 6:30"
+                },
+                {
+                  "price": 223,
+                  "priceRaw": "$223",
+                  "airline": "Jin Air",
+                  "direct": true,
+                  "stops": 0,
+                  "departAt": "2026-12-12 2:45"
+                },
+                {
+                  "price": 295,
+                  "priceRaw": "$295",
+                  "airline": "Jeju Air / Jeju Air",
+                  "direct": false,
+                  "stops": 1,
+                  "departAt": "2026-12-12 2:50"
+                },
+                {
+                  "price": 331,
+                  "priceRaw": "$331",
+                  "airline": "Hong Kong Express / Hong Kong Express",
+                  "direct": false,
+                  "stops": 1,
+                  "departAt": "2026-12-12 21:15"
+                }
+              ],
+              "attempts": 2
+            }
+          }
+        },
+        {
+          "leadDays": 60,
+          "outboundDate": "2027-01-11",
+          "returnDate": "2027-01-18",
+          "sources": {
+            "talordata": {
+              "ok": true,
+              "currency": "USD?",
+              "offerCount": 10,
+              "minPrice": 230,
+              "cheapest": {
+                "price": 230,
+                "airline": "Trinity Airways",
+                "direct": true,
+                "stops": 0
+              },
+              "top": [
+                {
+                  "price": 230,
+                  "priceRaw": "$230",
+                  "airline": "Trinity Airways",
+                  "direct": true,
+                  "stops": 0,
+                  "departAt": "2027-1-11 14:25"
+                },
+                {
+                  "price": 253,
+                  "priceRaw": "$253",
+                  "airline": "Jeju Air / Jeju Air",
+                  "direct": false,
+                  "stops": 1,
+                  "departAt": "2027-1-11 2:50"
+                },
+                {
+                  "price": 259,
+                  "priceRaw": "$259",
+                  "airline": "Jin Air",
+                  "direct": true,
+                  "stops": 0,
+                  "departAt": "2027-1-11 2:45"
+                },
+                {
+                  "price": 264,
+                  "priceRaw": "$264",
+                  "airline": "Tigerair Taiwan",
+                  "direct": true,
+                  "stops": 0,
+                  "departAt": "2027-1-11 7:55"
+                },
+                {
+                  "price": 296,
+                  "priceRaw": "$296",
+                  "airline": "Hong Kong Express / Hong Kong Express",
+                  "direct": false,
+                  "stops": 1,
+                  "departAt": "2027-1-11 14:50"
+                }
+              ],
+              "attempts": 2
+            }
+          }
+        }
+      ]
+    },
+    {
+      "destination": "LHR",
+      "city": "倫敦",
+      "region": "歐洲",
+      "queries": [
+        {
+          "leadDays": 30,
+          "outboundDate": "2026-12-12",
+          "returnDate": "2026-12-19",
+          "sources": {
+            "talordata": {
+              "ok": true,
+              "currency": "USD?",
+              "offerCount": 11,
+              "minPrice": 1489,
+              "cheapest": {
+                "price": 1489,
+                "airline": "China Airlines",
+                "direct": true,
+                "stops": 0
+              },
+              "top": [
+                {
+                  "price": 1489,
+                  "priceRaw": "$1,489",
+                  "airline": "China Airlines",
+                  "direct": true,
+                  "stops": 0,
+                  "departAt": "2026-12-12 8:45"
+                },
+                {
+                  "price": 1620,
+                  "priceRaw": "$1,620",
+                  "airline": "Shenzhen / Shenzhen",
+                  "direct": false,
+                  "stops": 1,
+                  "departAt": "2026-12-12 17:35"
+                },
+                {
+                  "price": 1667,
+                  "priceRaw": "$1,667",
+                  "airline": "Emirates / Emirates",
+                  "direct": false,
+                  "stops": 1,
+                  "departAt": "2026-12-12 23:00"
+                },
+                {
+                  "price": 1699,
+                  "priceRaw": "$1,699",
+                  "airline": "Emirates / Emirates",
+                  "direct": false,
+                  "stops": 1,
+                  "departAt": "2026-12-12 23:00"
+                },
+                {
+                  "price": 1723,
+                  "priceRaw": "$1,723",
+                  "airline": "Etihad / Etihad",
+                  "direct": false,
+                  "stops": 1,
+                  "departAt": "2026-12-12 18:40"
+                }
+              ],
+              "attempts": 1
+            }
+          }
+        },
+        {
+          "leadDays": 60,
+          "outboundDate": "2027-01-11",
+          "returnDate": "2027-01-18",
+          "sources": {
+            "talordata": {
+              "ok": true,
+              "currency": "USD?",
+              "offerCount": 9,
+              "minPrice": 890,
+              "cheapest": {
+                "price": 890,
+                "airline": "Etihad / Etihad",
+                "direct": false,
+                "stops": 1
+              },
+              "top": [
+                {
+                  "price": 890,
+                  "priceRaw": "$890",
+                  "airline": "Etihad / Etihad",
+                  "direct": false,
+                  "stops": 1,
+                  "departAt": "2027-1-11 18:40"
+                },
+                {
+                  "price": 1107,
+                  "priceRaw": "$1,107",
+                  "airline": "Cathay Pacific / Cathay Pacific",
+                  "direct": false,
+                  "stops": 1,
+                  "departAt": "2027-1-11 22:25"
+                },
+                {
+                  "price": 1154,
+                  "priceRaw": "$1,154",
+                  "airline": "Emirates / Emirates",
+                  "direct": false,
+                  "stops": 1,
+                  "departAt": "2027-1-11 23:00"
+                },
+                {
+                  "price": 1168,
+                  "priceRaw": "$1,168",
+                  "airline": "Etihad / Etihad",
+                  "direct": false,
+                  "stops": 1,
+                  "departAt": "2027-1-11 18:40"
+                },
+                {
+                  "price": 1181,
+                  "priceRaw": "$1,181",
+                  "airline": "Turkish Airlines / Turkish Airlines",
+                  "direct": false,
+                  "stops": 1,
+                  "departAt": "2027-1-11 22:00"
+                }
+              ],
+              "attempts": 3
+            }
+          }
+        }
+      ]
+    },
+    {
+      "destination": "LAX",
+      "city": "洛杉磯",
+      "region": "北美",
+      "queries": [
+        {
+          "leadDays": 30,
+          "outboundDate": "2026-12-12",
+          "returnDate": "2026-12-19",
+          "sources": {
+            "talordata": {
+              "ok": true,
+              "currency": "USD?",
+              "offerCount": 9,
+              "minPrice": 1525,
+              "cheapest": {
+                "price": 1525,
+                "airline": "Korean Air / Korean Air",
+                "direct": false,
+                "stops": 1
+              },
+              "top": [
+                {
+                  "price": 1525,
+                  "priceRaw": "$1,525",
+                  "airline": "Korean Air / Korean Air",
+                  "direct": false,
+                  "stops": 1,
+                  "departAt": "2026-12-12 12:25"
+                },
+                {
+                  "price": 1525,
+                  "priceRaw": "$1,525",
+                  "airline": "Korean Air / Korean Air",
+                  "direct": false,
+                  "stops": 1,
+                  "departAt": "2026-12-12 19:25"
+                },
+                {
+                  "price": 1545,
+                  "priceRaw": "$1,545",
+                  "airline": "Delta / Delta",
+                  "direct": false,
+                  "stops": 1,
+                  "departAt": "2026-12-12 10:55"
+                },
+                {
+                  "price": 1563,
+                  "priceRaw": "$1,563",
+                  "airline": "STARLUX Airlines",
+                  "direct": true,
+                  "stops": 0,
+                  "departAt": "2026-12-12 23:40"
+                },
+                {
+                  "price": 1573,
+                  "priceRaw": "$1,573",
+                  "airline": "China Airlines",
+                  "direct": true,
+                  "stops": 0,
+                  "departAt": "2026-12-12 23:50"
+                }
+              ],
+              "attempts": 2
+            }
+          }
+        },
+        {
+          "leadDays": 60,
+          "outboundDate": "2027-01-11",
+          "returnDate": "2027-01-18",
+          "sources": {
+            "talordata": {
+              "ok": false,
+              "error": "code 300: error, not search（重試 4 次）",
+              "attempts": 4
+            }
+          }
+        }
+      ]
+    }
+  ]
+}
