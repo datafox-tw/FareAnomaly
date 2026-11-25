@@ -1,0 +1,616 @@
+{
+  "capturedAt": "2026-11-25T09:35:53.101Z",
+  "captureDate": "2026-11-25",
+  "origin": "TPE",
+  "tripLength": 7,
+  "requestedCurrency": "TWD",
+  "note": "TalorData 價格實測回 USD；requestedCurrency 僅記錄請求值，實際幣別見各 source.currency。",
+  "routes": [
+    {
+      "destination": "NRT",
+      "city": "東京成田",
+      "region": "日本",
+      "queries": [
+        {
+          "leadDays": 30,
+          "outboundDate": "2026-12-25",
+          "returnDate": "2027-01-01",
+          "sources": {
+            "talordata": {
+              "ok": true,
+              "currency": "USD?",
+              "offerCount": 23,
+              "minPrice": 290,
+              "cheapest": {
+                "price": 290,
+                "airline": "Scoot",
+                "direct": true,
+                "stops": 0
+              },
+              "top": [
+                {
+                  "price": 290,
+                  "priceRaw": "$290",
+                  "airline": "Scoot",
+                  "direct": true,
+                  "stops": 0,
+                  "departAt": "2026-12-25 14:25"
+                },
+                {
+                  "price": 302,
+                  "priceRaw": "$302",
+                  "airline": "Thai Lion Air",
+                  "direct": true,
+                  "stops": 0,
+                  "departAt": "2026-12-25 12:10"
+                },
+                {
+                  "price": 304,
+                  "priceRaw": "$304",
+                  "airline": "Peach Aviation",
+                  "direct": true,
+                  "stops": 0,
+                  "departAt": "2026-12-25 17:15"
+                },
+                {
+                  "price": 345,
+                  "priceRaw": "$345",
+                  "airline": "Tigerair Taiwan",
+                  "direct": true,
+                  "stops": 0,
+                  "departAt": "2026-12-25 13:30"
+                },
+                {
+                  "price": 354,
+                  "priceRaw": "$354",
+                  "airline": "Jetstar",
+                  "direct": true,
+                  "stops": 0,
+                  "departAt": "2026-12-25 12:50"
+                }
+              ],
+              "attempts": 2
+            }
+          }
+        },
+        {
+          "leadDays": 60,
+          "outboundDate": "2027-01-24",
+          "returnDate": "2027-01-31",
+          "sources": {
+            "talordata": {
+              "ok": true,
+              "currency": "TWD",
+              "offerCount": 0,
+              "minPrice": null,
+              "cheapest": null,
+              "top": [],
+              "attempts": 2
+            }
+          }
+        }
+      ]
+    },
+    {
+      "destination": "ICN",
+      "city": "首爾仁川",
+      "region": "韓國",
+      "queries": [
+        {
+          "leadDays": 30,
+          "outboundDate": "2026-12-25",
+          "returnDate": "2027-01-01",
+          "sources": {
+            "talordata": {
+              "ok": true,
+              "currency": "TWD",
+              "offerCount": 0,
+              "minPrice": null,
+              "cheapest": null,
+              "top": [],
+              "attempts": 1
+            }
+          }
+        },
+        {
+          "leadDays": 60,
+          "outboundDate": "2027-01-24",
+          "returnDate": "2027-01-31",
+          "sources": {
+            "talordata": {
+              "ok": true,
+              "currency": "USD?",
+              "offerCount": 15,
+              "minPrice": 319,
+              "cheapest": {
+                "price": 319,
+                "airline": "Hong Kong Express / Hong Kong Express",
+                "direct": false,
+                "stops": 1
+              },
+              "top": [
+                {
+                  "price": 319,
+                  "priceRaw": "$319",
+                  "airline": "Hong Kong Express / Hong Kong Express",
+                  "direct": false,
+                  "stops": 1,
+                  "departAt": "2027-1-24 14:50"
+                },
+                {
+                  "price": 327,
+                  "priceRaw": "$327",
+                  "airline": "Hong Kong Express / Hong Kong Express",
+                  "direct": false,
+                  "stops": 1,
+                  "departAt": "2027-1-24 17:40"
+                },
+                {
+                  "price": 344,
+                  "priceRaw": "$344",
+                  "airline": "Tigerair Taiwan",
+                  "direct": true,
+                  "stops": 0,
+                  "departAt": "2027-1-24 20:00"
+                },
+                {
+                  "price": 440,
+                  "priceRaw": "$440",
+                  "airline": "Scoot",
+                  "direct": true,
+                  "stops": 0,
+                  "departAt": "2027-1-24 18:10"
+                },
+                {
+                  "price": 479,
+                  "priceRaw": "$479",
+                  "airline": "Jin Air",
+                  "direct": true,
+                  "stops": 0,
+                  "departAt": "2027-1-24 12:40"
+                }
+              ],
+              "attempts": 1
+            }
+          }
+        }
+      ]
+    },
+    {
+      "destination": "KIX",
+      "city": "大阪關西",
+      "region": "日本",
+      "queries": [
+        {
+          "leadDays": 30,
+          "outboundDate": "2026-12-25",
+          "returnDate": "2027-01-01",
+          "sources": {
+            "talordata": {
+              "ok": true,
+              "currency": "USD?",
+              "offerCount": 18,
+              "minPrice": 271,
+              "cheapest": {
+                "price": 271,
+                "airline": "Peach Aviation",
+                "direct": true,
+                "stops": 0
+              },
+              "top": [
+                {
+                  "price": 271,
+                  "priceRaw": "$271",
+                  "airline": "Peach Aviation",
+                  "direct": true,
+                  "stops": 0,
+                  "departAt": "2026-12-25 13:40"
+                },
+                {
+                  "price": 271,
+                  "priceRaw": "$271",
+                  "airline": "Jetstar",
+                  "direct": true,
+                  "stops": 0,
+                  "departAt": "2026-12-25 18:15"
+                },
+                {
+                  "price": 271,
+                  "priceRaw": "$271",
+                  "airline": "Peach Aviation",
+                  "direct": true,
+                  "stops": 0,
+                  "departAt": "2026-12-25 18:50"
+                },
+                {
+                  "price": 304,
+                  "priceRaw": "$304",
+                  "airline": "Peach Aviation",
+                  "direct": true,
+                  "stops": 0,
+                  "departAt": "2026-12-25 9:40"
+                },
+                {
+                  "price": 315,
+                  "priceRaw": "$315",
+                  "airline": "AirAsia",
+                  "direct": true,
+                  "stops": 0,
+                  "departAt": "2026-12-25 15:40"
+                }
+              ],
+              "attempts": 1
+            }
+          }
+        },
+        {
+          "leadDays": 60,
+          "outboundDate": "2027-01-24",
+          "returnDate": "2027-01-31",
+          "sources": {
+            "talordata": {
+              "ok": true,
+              "currency": "TWD",
+              "offerCount": 0,
+              "minPrice": null,
+              "cheapest": null,
+              "top": [],
+              "attempts": 1
+            }
+          }
+        }
+      ]
+    },
+    {
+      "destination": "OKA",
+      "city": "沖繩那霸",
+      "region": "日本",
+      "queries": [
+        {
+          "leadDays": 30,
+          "outboundDate": "2026-12-25",
+          "returnDate": "2027-01-01",
+          "sources": {
+            "talordata": {
+              "ok": true,
+              "currency": "TWD",
+              "offerCount": 0,
+              "minPrice": null,
+              "cheapest": null,
+              "top": [],
+              "attempts": 1
+            }
+          }
+        },
+        {
+          "leadDays": 60,
+          "outboundDate": "2027-01-24",
+          "returnDate": "2027-01-31",
+          "sources": {
+            "talordata": {
+              "ok": true,
+              "currency": "TWD",
+              "offerCount": 0,
+              "minPrice": null,
+              "cheapest": null,
+              "top": [],
+              "attempts": 1
+            }
+          }
+        }
+      ]
+    },
+    {
+      "destination": "BKK",
+      "city": "曼谷",
+      "region": "東南亞",
+      "queries": [
+        {
+          "leadDays": 30,
+          "outboundDate": "2026-12-25",
+          "returnDate": "2027-01-01",
+          "sources": {
+            "talordata": {
+              "ok": true,
+              "currency": "TWD",
+              "offerCount": 0,
+              "minPrice": null,
+              "cheapest": null,
+              "top": [],
+              "attempts": 1
+            }
+          }
+        },
+        {
+          "leadDays": 60,
+          "outboundDate": "2027-01-24",
+          "returnDate": "2027-01-31",
+          "sources": {
+            "talordata": {
+              "ok": true,
+              "currency": "TWD",
+              "offerCount": 0,
+              "minPrice": null,
+              "cheapest": null,
+              "top": [],
+              "attempts": 1
+            }
+          }
+        }
+      ]
+    },
+    {
+      "destination": "SIN",
+      "city": "新加坡",
+      "region": "東南亞",
+      "queries": [
+        {
+          "leadDays": 30,
+          "outboundDate": "2026-12-25",
+          "returnDate": "2027-01-01",
+          "sources": {
+            "talordata": {
+              "ok": true,
+              "currency": "TWD",
+              "offerCount": 0,
+              "minPrice": null,
+              "cheapest": null,
+              "top": [],
+              "attempts": 1
+            }
+          }
+        },
+        {
+          "leadDays": 60,
+          "outboundDate": "2027-01-24",
+          "returnDate": "2027-01-31",
+          "sources": {
+            "talordata": {
+              "ok": true,
+              "currency": "TWD",
+              "offerCount": 0,
+              "minPrice": null,
+              "cheapest": null,
+              "top": [],
+              "attempts": 1
+            }
+          }
+        }
+      ]
+    },
+    {
+      "destination": "CTS",
+      "city": "札幌新千歲",
+      "region": "日本",
+      "queries": [
+        {
+          "leadDays": 30,
+          "outboundDate": "2026-12-25",
+          "returnDate": "2027-01-01",
+          "sources": {
+            "talordata": {
+              "ok": true,
+              "currency": "TWD",
+              "offerCount": 0,
+              "minPrice": null,
+              "cheapest": null,
+              "top": [],
+              "attempts": 1
+            }
+          }
+        },
+        {
+          "leadDays": 60,
+          "outboundDate": "2027-01-24",
+          "returnDate": "2027-01-31",
+          "sources": {
+            "talordata": {
+              "ok": true,
+              "currency": "TWD",
+              "offerCount": 0,
+              "minPrice": null,
+              "cheapest": null,
+              "top": [],
+              "attempts": 1
+            }
+          }
+        }
+      ]
+    },
+    {
+      "destination": "FUK",
+      "city": "福岡",
+      "region": "日本",
+      "queries": [
+        {
+          "leadDays": 30,
+          "outboundDate": "2026-12-25",
+          "returnDate": "2027-01-01",
+          "sources": {
+            "talordata": {
+              "ok": true,
+              "currency": "TWD",
+              "offerCount": 0,
+              "minPrice": null,
+              "cheapest": null,
+              "top": [],
+              "attempts": 1
+            }
+          }
+        },
+        {
+          "leadDays": 60,
+          "outboundDate": "2027-01-24",
+          "returnDate": "2027-01-31",
+          "sources": {
+            "talordata": {
+              "ok": true,
+              "currency": "TWD",
+              "offerCount": 0,
+              "minPrice": null,
+              "cheapest": null,
+              "top": [],
+              "attempts": 1
+            }
+          }
+        }
+      ]
+    },
+    {
+      "destination": "NGO",
+      "city": "名古屋",
+      "region": "日本",
+      "queries": [
+        {
+          "leadDays": 30,
+          "outboundDate": "2026-12-25",
+          "returnDate": "2027-01-01",
+          "sources": {
+            "talordata": {
+              "ok": true,
+              "currency": "TWD",
+              "offerCount": 0,
+              "minPrice": null,
+              "cheapest": null,
+              "top": [],
+              "attempts": 1
+            }
+          }
+        },
+        {
+          "leadDays": 60,
+          "outboundDate": "2027-01-24",
+          "returnDate": "2027-01-31",
+          "sources": {
+            "talordata": {
+              "ok": true,
+              "currency": "TWD",
+              "offerCount": 0,
+              "minPrice": null,
+              "cheapest": null,
+              "top": [],
+              "attempts": 1
+            }
+          }
+        }
+      ]
+    },
+    {
+      "destination": "CJU",
+      "city": "濟州",
+      "region": "韓國",
+      "queries": [
+        {
+          "leadDays": 30,
+          "outboundDate": "2026-12-25",
+          "returnDate": "2027-01-01",
+          "sources": {
+            "talordata": {
+              "ok": true,
+              "currency": "TWD",
+              "offerCount": 0,
+              "minPrice": null,
+              "cheapest": null,
+              "top": [],
+              "attempts": 1
+            }
+          }
+        },
+        {
+          "leadDays": 60,
+          "outboundDate": "2027-01-24",
+          "returnDate": "2027-01-31",
+          "sources": {
+            "talordata": {
+              "ok": true,
+              "currency": "TWD",
+              "offerCount": 0,
+              "minPrice": null,
+              "cheapest": null,
+              "top": [],
+              "attempts": 1
+            }
+          }
+        }
+      ]
+    },
+    {
+      "destination": "LHR",
+      "city": "倫敦",
+      "region": "歐洲",
+      "queries": [
+        {
+          "leadDays": 30,
+          "outboundDate": "2026-12-25",
+          "returnDate": "2027-01-01",
+          "sources": {
+            "talordata": {
+              "ok": true,
+              "currency": "TWD",
+              "offerCount": 0,
+              "minPrice": null,
+              "cheapest": null,
+              "top": [],
+              "attempts": 1
+            }
+          }
+        },
+        {
+          "leadDays": 60,
+          "outboundDate": "2027-01-24",
+          "returnDate": "2027-01-31",
+          "sources": {
+            "talordata": {
+              "ok": true,
+              "currency": "TWD",
+              "offerCount": 0,
+              "minPrice": null,
+              "cheapest": null,
+              "top": [],
+              "attempts": 1
+            }
+          }
+        }
+      ]
+    },
+    {
+      "destination": "LAX",
+      "city": "洛杉磯",
+      "region": "北美",
+      "queries": [
+        {
+          "leadDays": 30,
+          "outboundDate": "2026-12-25",
+          "returnDate": "2027-01-01",
+          "sources": {
+            "talordata": {
+              "ok": true,
+              "currency": "TWD",
+              "offerCount": 0,
+              "minPrice": null,
+              "cheapest": null,
+              "top": [],
+              "attempts": 1
+            }
+          }
+        },
+        {
+          "leadDays": 60,
+          "outboundDate": "2027-01-24",
+          "returnDate": "2027-01-31",
+          "sources": {
+            "talordata": {
+              "ok": true,
+              "currency": "TWD",
+              "offerCount": 0,
+              "minPrice": null,
+              "cheapest": null,
+              "top": [],
+              "attempts": 1
+            }
+          }
+        }
+      ]
+    }
+  ]
+}
